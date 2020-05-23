@@ -3,7 +3,8 @@ let tree;
 
 function setup() {
   console.log("setup")
-  noCanvas();
+  createCanvas(600, 400);
+  background(51);
 
   tree = new Tree();
 
@@ -11,10 +12,12 @@ function setup() {
     const number = floor(random(0, 100));
     tree.addValue(number);
   }
-  tree.addValue(1337);
- 
-  tree.traverse();
-  console.log(tree.search(1337))
+
+  tree.addValue(1);
+  tree.addValue(0);
+  tree.addValue(2);
+
+  tree.traverse(); 
 }
 
 

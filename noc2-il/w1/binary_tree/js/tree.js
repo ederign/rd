@@ -5,14 +5,14 @@ class Tree {
 
   addValue(n) {
     if (this.root === null) {
-      this.root = new Node(n);
+      this.root = new Node(n, width/2, 16, true);
     } else {
       this.root.addNode(new Node(n));
     }
   }
 
   traverse() {
-    this.root.visit();
+    this.root.visit(this.root);
   }
 
   search(val) {
