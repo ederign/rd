@@ -23,7 +23,7 @@ let path;
 
 
 function setup() {
-  createCanvas(800, 600)
+  createCanvas(600, 600)
 
   //grid cell size
   w = width / cols;
@@ -61,7 +61,6 @@ function setup() {
 function draw() {
   background(255);
 
-
   a_star();
 
   visualize();
@@ -77,13 +76,10 @@ function visualize() {
     }
   }
 
-  for (let i = 0; i < closedSet.length; i++) {
-    closedSet[i].show(color(255, 0, 0));
-  }
+  //color end nodes
+  start.show(color(0, 255, 0));
+  end.show(color(255, 0, 0));
 
-  for (let i = 0; i < openSet.length; i++) {
-    openSet[i].show(color(0, 255, 0));
-  }
 
   path = [];
   let temp = current;
@@ -99,11 +95,11 @@ function visualize() {
   });
 
   stroke(255, 0, 200);
-  strokeWeight(w/2)
+  strokeWeight(w / 2)
   noFill();
   beginShape();
   path.forEach(path => {
-    vertex(path.i * w + w/2, path.j * h + h/2)
+    vertex(path.i * w + w / 2, path.j * h + h / 2)
   });
   endShape();
 }
@@ -132,7 +128,7 @@ function a_star() {
 
     neighbors.forEach(neighbor => {
 
-      if (!closedSet.includes(neighbor) && !neighbor.wall) {
+      if (!closedSet.includes(neighbor) && dontColideWithWall(current, neighbor)) {
 
         let tempG = current.g + heuristic(neighbor, current);
 
@@ -154,6 +150,7 @@ function a_star() {
           neighbor.h = heuristic(neighbor, end);
           neighbor.f = neighbor.g + neighbor.h;
           neighbor.previous = current;
+          console.log('Walk');
         }
       }
 
@@ -167,9 +164,67 @@ function a_star() {
   }
 }
 
+function dontColideWithWall(current, neighbor) {
+
+  // console.log("dontColideWithWall");
+  // console.log("current: ", current.i, current.j, current.wall);
+  // console.log("neighbor: ", neighbor.i, neighbor.j, neighbor.wall);
+  let diagonalWall = false;
+
+  if (northwest(current, neighbor)) {
+    let top = grid[current.i][current.j - 1];
+    let bottom = grid[current.i - 1][current.j];
+    if (top.wall || bottom.wall) {
+      diagonalWall = true;
+    }
+  }
+  else if (southeast(current, neighbor)) {
+    let top = grid[current.i + 1][current.j];
+    let bottom = grid[current.i][current.j + 1];
+    if (top.wall || bottom.wall) {
+      diagonalWall = true;
+    } 
+  }
+  else if (northeast(current, neighbor)) {
+    let top = grid[current.i ][current.j -1];
+    let bottom = grid[current.i +1][current.j ];
+    if (top.wall || bottom.wall) {
+      diagonalWall = true;
+    } 
+  }
+  else if (southwest(current, neighbor)) {
+    let top = grid[current.i -1 ][current.j];
+    let bottom = grid[current.i][current.j +1];
+    if (top.wall || bottom.wall) {
+      diagonalWall = true;
+    }
+  }
 
 
-// Helper functions 
+  return !neighbor.wall && !diagonalWall;
+}
+
+
+// Helper functions
+
+function northwest(current, neighbour) {
+  return (current.i - 1 === neighbour.i) && (current.j - 1 === neighbour.j);
+}
+
+function southeast(current, neighbour) {
+  return (current.i + 1 === neighbour.i) && (current.j + 1 === neighbour.j);
+}
+
+function northeast(current, neighbour) {
+  return (current.i + 1 === neighbour.i) && (current.j - 1 === neighbour.j);
+}
+
+function southwest(current, neighbour) {
+  return (current.i - 1 === neighbour.i) && (current.j + 1 === neighbour.j);
+}
+
+
+
 
 //"Guess" from how far it's between two points(raw distance in this case)
 function heuristic(start, end) {

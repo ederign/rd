@@ -20,17 +20,19 @@ class Spot {
   }
 
   show(color) {
-
+    
     if (this.wall) {
       fill(0);
       noStroke();
-      ellipse(this.i * w + w / 2, this.j * h + h / 2, w / 2, h / 2);
+      // ellipse(this.i * w + w / 2, this.j * h + h / 2, w / 2, h / 2);
+      rect(this.i*w, this.j*h,w, h);
     }
-    else if (color) {
-      // fill(color);
-      // noStroke();
-      // ellipse(this.i * w + w / 2, this.j *h + h / 2, w / 2, h / 2)
+    else {
+      fill(color);
+      noStroke();
+      rect(this.i*w, this.j*h,w, h);
     }
+    
   }
 
   addNeighbors(grid) {
@@ -62,4 +64,8 @@ class Spot {
       this.neighbors.push(grid[i + 1][j + 1]);
     }
   }
+
+  removeNeighbor(neighbor) {
+    removeFromArray(this.neighbors, neighbor);
+  } 
 }
