@@ -2,8 +2,8 @@
 //Link: https://www.youtube.com/watch?v=aKYlikFAV4k&list=PLRqwX-V7Uu6bePNiZLnglXUp2LXIjlCdb&index=7&t=0s
 
 //grid size
-let cols = 25;
-let rows = 25;
+let cols = 50;
+let rows = 50;
 let grid = new Array(cols);
 
 //nodes still need to be evaluated
@@ -22,49 +22,8 @@ let w, h;
 let path;
 
 
-class Spot {
-
-  constructor(i, j) {
-    this.i = i;
-    this.j = j;
-    this.f = 0;
-    this.g = 0;
-    this.h = 0;
-    this.neighbors = [];
-    this.previous = undefined;
-  }
-
-  show(color) {
-    fill(color);
-    noStroke();
-    rect(this.i * w, this.j * h, w - 1, h - 1)
-  }
-
-  addNeighbors(grid) {
-    const i = this.i;
-    const j = this.j;
-
-    if (i < cols - 1) {
-      this.neighbors.push(grid[i + 1][j]);
-    }
-
-    if (i < 0) {
-      this.neighbors.push(grid[i - 1][j]);
-    }
-
-    if (j < rows - 1) {
-      this.neighbors.push(grid[i][j + 1]);
-    }
-
-    if (j > 0) {
-      this.neighbors.push(grid[i][j - 1]);
-    }
-
-  }
-}
-
 function setup() {
-  createCanvas(400, 400)
+  createCanvas(800, 600)
 
   //grid cell size
   w = width / cols;
@@ -91,18 +50,25 @@ function setup() {
 
 
   start = grid[0][0];
-  end = grid[cols - 1][3];
+  start.wall = false;
+  end = grid[cols - 1][rows - 1];
+  end.wall = false;
 
   openSet.push(start);
 
 }
 
 function draw() {
-  background(0);
- 
+  background(255);
+
 
   a_star();
 
+  visualize();
+}
+
+
+function visualize() {
   //draw current state
 
   for (let i = 0; i < cols; i++) {
@@ -129,14 +95,21 @@ function draw() {
   }
 
   path.forEach(path => {
-    path.show(color(0, 0, 255));
+    // path.show(color(0, 0, 255));
   });
 
+  stroke(255, 0, 200);
+  strokeWeight(w/2)
+  noFill();
+  beginShape();
+  path.forEach(path => {
+    vertex(path.i * w + w/2, path.j * h + h/2)
+  });
+  endShape();
 }
 
-
 function a_star() {
-  
+
   if (openSet.length > 0) {
     let winner = 0;
     for (let i = 0; i < openSet.length; i++) {
@@ -153,35 +126,42 @@ function a_star() {
 
     removeFromArray(openSet, current);
     closedSet.push(current);
-    
+
 
     let neighbors = current.neighbors;
 
     neighbors.forEach(neighbor => {
 
-      if (!closedSet.includes(neighbor)) {
-        // 1 is distance to neighbor
-        let tempG = current.g + 1;
+      if (!closedSet.includes(neighbor) && !neighbor.wall) {
 
+        let tempG = current.g + heuristic(neighbor, current);
+
+        //path better than before?
+        let newPath = false;
         if (openSet.includes(neighbor)) {
           if (tempG < neighbor.g) {
             neighbor.g = tempG; //old g was better
+            newPath = true;
           }
         } else {
           neighbor.g = tempG;
+          newPath = true;
           openSet.push(neighbor);
         }
 
         //heuristic
-        neighbor.h = heuristic(neighbor, end);
-        neighbor.f = neighbor.g + neighbor.f;
-        neighbor.previous = current;
+        if (newPath) {
+          neighbor.h = heuristic(neighbor, end);
+          neighbor.f = neighbor.g + neighbor.h;
+          neighbor.previous = current;
+        }
       }
 
     });
   }
   else {
-    console.log('no solution');
+    createDiv('No solution');
+
     noLoop();
     return;
   }
@@ -193,8 +173,8 @@ function a_star() {
 
 //"Guess" from how far it's between two points(raw distance in this case)
 function heuristic(start, end) {
-  // return dist(start.i, start.j, end.i, end.j);
-  return abs(start.i - end.i) + abs(start.j - end.j);
+  // return abs(start.i - end.i) + abs(start.j - end.j);
+  return dist(start.i, start.j, end.i, end.j);
 }
 
 function removeFromArray(arr, elt) {
