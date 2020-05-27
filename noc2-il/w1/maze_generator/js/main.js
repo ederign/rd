@@ -3,22 +3,24 @@
 
 let cols, rows;
 let w = 40;
-let h = 40;
 let grid = [];
 
+let current;
+
 function setup() {
+    frameRate(5);
     createCanvas(600, 600);
     cols = floor(width / w);
     rows = floor(height / w);
 
-    for (let x = 0; x < rows; x++) {
-        for (let y = 0; y < cols; y++) {
-            let cell = new Cell(x, y);
-            grid.push(cell);
+    for (let j = 0; j < rows; j++) {
+        for (let i = 0; i < cols; i++) {
+          var cell = new Cell(i, j);
+          grid.push(cell);
         }
-    }
+      }
     // console.log(grid)
-
+    current = grid[0];
 }
 
 
@@ -27,4 +29,12 @@ function draw() {
     grid.forEach(cell => {
         cell.show();
     })
+
+    current.visit();
+    let next = current.checkNeighbors();
+    // console.log(next); 
+    if (next) {
+        current = next;
+    }
+
 }
