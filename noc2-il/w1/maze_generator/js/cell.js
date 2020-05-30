@@ -8,6 +8,28 @@ class Cell {
     this.visited = false;
   }
 
+  removeTopWall() {
+    this.walls[0] = false;
+  }
+  removeRightWall() {
+    this.walls[1] = false;
+  }
+  removeBottomWall() {
+    this.walls[2] = false;
+  }
+  removeLeftWall() {
+    this.walls[3] = false;
+  }
+
+  highlight() {
+    let x = this.i * w;
+    let y = this.j * w;
+    noStroke();
+    fill(0, 0, 255, 100);
+    rect(x, y, w, w);
+
+  }
+
   show() {
     let x = this.i * w;
     let y = this.j * w;
@@ -25,18 +47,20 @@ class Cell {
     //bottom
     if (this.walls[2]) {
       line(x + w, y + w, x, y + w);
-    }
+    } 
     //left
     if (this.walls[3]) {
       line(x, y + w, x, y);
     }
 
     if (this.visited) {
+      noStroke();
       fill(255, 0, 255, 100);
       rect(x, y, w, w);
     }
   }
 
+ 
   visit() {
     this.visited = true;
   }
