@@ -3,13 +3,14 @@
 // https://en.wikipedia.org/wiki/Maze_generation_algorithm#Recursive_backtracker
 
 let cols, rows;
-let w = 20;
+let w = 40;
 let grid = [];
+let stack = [];
 
 let current;
 
 function setup() {
-    frameRate(5);
+    frameRate(20);
     createCanvas(600, 600);
     cols = floor(width / w);
     rows = floor(height / w);
@@ -42,12 +43,16 @@ function draw() {
         next.visit();
 
         //step 2
+        stack.push(current);
 
         //step 3
         removeWalls(current, next);
 
         //step 4
         current = next;
+    } else if (stack.length > 0) {
+        current = stack.pop();
+        console.log("new current: " + current.i, current.j);
     }
 
  
@@ -58,7 +63,6 @@ function removeWalls(a, b) {
     let xb = b.i
     let ya = a.j;
     let yb = b.j
-    console.log(a.walls);
     if ((xa - xb) === 1) {
         a.removeLeftWall();
         b.removeRightWall();
