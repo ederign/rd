@@ -27,9 +27,6 @@ function draw() {
   }
   else {
 
-
-
-
     //Step 2
     let largestJ = -1;
     for (let j = 0; j < vals.length; j++) {
@@ -53,6 +50,7 @@ function draw() {
       s += element;
     });
     fill(255); 
+
     text(s, 20, height / 2);
 
   }
