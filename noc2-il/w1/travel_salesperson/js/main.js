@@ -1,5 +1,7 @@
 //coding during https://www.youtube.com/watch?v=BAejnwN4Ccw&list=PLRqwX-V7Uu6bePNiZLnglXUp2LXIjlCdb&index=14&t=0s
 
+//lexicografic: https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering
+
 let cities = [];
 let totalCities = 8;
 
