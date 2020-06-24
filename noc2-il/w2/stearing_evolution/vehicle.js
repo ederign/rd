@@ -6,6 +6,7 @@
 
 
 class Vehicle {
+
   constructor(x, y) {
     this.acceleration = createVector(0, 0);
     this.velocity = createVector(0, -2);
@@ -15,7 +16,7 @@ class Vehicle {
     this.maxforce = 0.2;
   }
 
-  // Method to update location
+
   update() {
     // Update velocity
     this.velocity.add(this.acceleration);
@@ -29,6 +30,24 @@ class Vehicle {
   applyForce(force) {
     // We could add mass here if we want A = F / M
     this.acceleration.add(force);
+  }
+
+  eat(list) {
+    let record = Infinity;
+    let closest = null;
+    for (let i = 0; i < list.length; i++) {
+      const d = this.position.dist(list[i]);
+      if (d < record) {
+        record = d;
+        closest = i;
+      }
+    }
+
+    if (record < 5) {
+      list.splice(closest, 1);
+    }
+
+    this.seek(list[closest]);
   }
 
   // A method that calculates a steering force towards a target

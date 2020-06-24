@@ -10,26 +10,48 @@
 // See: http://www.red3d.com/cwr/
 
 let v;
+let food = [];
+let poison = [];
 
 function setup() {
   createCanvas(640, 360);
   v = new Vehicle(width / 2, height / 2);
+  for (let i = 0; i < 10; i++) {
+    let x = random(width);
+    let y = random(height);
+    food.push(createVector(x, y));
+  }
+
+  for (let i = 0; i < 10; i++) {
+    let x = random(width);
+    let y = random(height);
+    poison.push(createVector(x, y));
+  }
+
 }
 
 function draw() {
   background(51);
 
-  let mouse = createVector(mouseX, mouseY);
-
-  // Draw an ellipse at the mouse position
-  fill(127);
-  stroke(200);
-  strokeWeight(2);
-  ellipse(mouse.x, mouse.y, 48, 48);
-
   // Call the appropriate steering behaviors for our agents
-  v.seek(mouse);
+  v.eat(food);
+  v.eat(poison);
+  //v.seek(mouse);
   v.update();
   v.display();
+
+  for (let i = 0; i < food.length; i++) {
+    fill(0, 255, 0);
+    noStroke();
+    ellipse(food[i].x, food[i].y, 8, 8);
+  }
+
+
+  for (let i = 0; i < poison.length; i++) {
+    fill(255, 0, 0);
+    noStroke();
+    ellipse(poison[i].x, poison[i].y, 8, 8);
+  }
+
 
 }
