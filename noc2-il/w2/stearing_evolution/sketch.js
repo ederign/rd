@@ -1,8 +1,12 @@
-//Coding while watching the great 
+//stop at https://www.youtube.com/watch?v=XaOVH8ZSRNA&list=PLRqwX-V7Uu6bJM3VgzjNV5YxVxUwzALHV&index=15
+
+
+//Coding while watching the great
 // The Nature of Code
 // Daniel Shiffman
 // http://natureofcode.com
 //https://www.youtube.com/watch?v=flxOkx0yLrY&list=PLRqwX-V7Uu6bJM3VgzjNV5YxVxUwzALHV&index=15&t=0s
+
 
 
 // Implements Craig Reynold's autonomous steering behaviors
@@ -34,8 +38,8 @@ function draw() {
   background(51);
 
   // Call the appropriate steering behaviors for our agents
-  v.eat(food);
-  v.eat(poison);
+  v.behaviors(food, poison);
+  //v.eat(poison);
   //v.seek(mouse);
   v.update();
   v.display();

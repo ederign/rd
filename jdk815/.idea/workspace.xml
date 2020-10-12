@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9290b42e-c87a-47db-8482-bf2587f26b7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk815.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/NullPointer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/Pessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/SampleClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/SampleTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/ShapeClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/StudentsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/SwitchSamples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/ederign/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/modern-js-from-scratch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../js/modern-js-from-scratch/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../noc2-il/w2/stearing_evolution/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../noc2-il/w2/stearing_evolution/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../noc2-il/w2/stearing_evolution/vehicle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../noc2-il/w2/stearing_evolution/vehicle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-avancado-course/client/.storybook/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-avancado-course/client/.storybook/config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ghGQ376kZeoP6dofFqUAqAaGJx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="me.ederign" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ShapeClient">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.ederign.App" />
+      <module name="jdk815" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.ederign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NullPointer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.ederign.NullPointer" />
+      <module name="jdk815" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.ederign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.ederign.SampleClass" />
+      <module name="jdk815" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.ederign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShapeClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.ederign.ShapeClient" />
+      <module name="jdk815" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.ederign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwitchSamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.ederign.SwitchSamples" />
+      <module name="jdk815" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.ederign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ShapeClient" />
+        <item itemvalue="Application.SampleClass" />
+        <item itemvalue="Application.NullPointer" />
+        <item itemvalue="Application.SwitchSamples" />
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9290b42e-c87a-47db-8482-bf2587f26b7a" name="Default Changelist" comment="" />
+      <created>1598559391037</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598559391037</updated>
+      <workItem from="1598559393662" duration="11563000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="351" y="550" key="#Notifications" timestamp="1598559475538">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="351" y="550" key="#Notifications/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598559475538" />
+    <state x="1475" y="494" key="#com.intellij.ide.util.MemberChooser" timestamp="1598573231677">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1475" y="494" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598573231677" />
+    <state x="343" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598566019597">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="343" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598566019597" />
+    <state width="1330" height="407" key="GridCell.Tab.0.bottom" timestamp="1598617640784">
+      <screen x="-1680" y="299" width="1680" height="1027" />
+    </state>
+    <state width="1330" height="407" key="GridCell.Tab.0.bottom/0.23.2560.1417/-1680.299.1680.1027@-1680.299.1680.1027" timestamp="1598617640784" />
+    <state width="1330" height="109" key="GridCell.Tab.0.bottom/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598575304448" />
+    <state width="1330" height="407" key="GridCell.Tab.0.center" timestamp="1598617640783">
+      <screen x="-1680" y="299" width="1680" height="1027" />
+    </state>
+    <state width="1330" height="407" key="GridCell.Tab.0.center/0.23.2560.1417/-1680.299.1680.1027@-1680.299.1680.1027" timestamp="1598617640783" />
+    <state width="1330" height="109" key="GridCell.Tab.0.center/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598575304448" />
+    <state width="1330" height="407" key="GridCell.Tab.0.left" timestamp="1598617640782">
+      <screen x="-1680" y="299" width="1680" height="1027" />
+    </state>
+    <state width="1330" height="407" key="GridCell.Tab.0.left/0.23.2560.1417/-1680.299.1680.1027@-1680.299.1680.1027" timestamp="1598617640782" />
+    <state width="1330" height="109" key="GridCell.Tab.0.left/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598575304447" />
+    <state width="1330" height="407" key="GridCell.Tab.0.right" timestamp="1598617640783">
+      <screen x="-1680" y="299" width="1680" height="1027" />
+    </state>
+    <state width="1330" height="407" key="GridCell.Tab.0.right/0.23.2560.1417/-1680.299.1680.1027@-1680.299.1680.1027" timestamp="1598617640783" />
+    <state width="1330" height="109" key="GridCell.Tab.0.right/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598575304448" />
+    <state width="1330" height="407" key="GridCell.Tab.1.bottom" timestamp="1598617640785">
+      <screen x="-1680" y="299" width="1680" height="1027" />
+    </state>
+    <state width="1330" height="407" key="GridCell.Tab.1.bottom/0.23.2560.1417/-1680.299.1680.1027@-1680.299.1680.1027" timestamp="1598617640785" />
+    <state width="1330" height="407" key="GridCell.Tab.1.bottom/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598570190583" />
+    <state width="1330" height="407" key="GridCell.Tab.1.center" timestamp="1598617640784">
+      <screen x="-1680" y="299" width="1680" height="1027" />
+    </state>
+    <state width="1330" height="407" key="GridCell.Tab.1.center/0.23.2560.1417/-1680.299.1680.1027@-1680.299.1680.1027" timestamp="1598617640784" />
+    <state width="1330" height="407" key="GridCell.Tab.1.center/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598570190575" />
+    <state width="1330" height="407" key="GridCell.Tab.1.left" timestamp="1598617640784">
+      <screen x="-1680" y="299" width="1680" height="1027" />
+    </state>
+    <state width="1330" height="407" key="GridCell.Tab.1.left/0.23.2560.1417/-1680.299.1680.1027@-1680.299.1680.1027" timestamp="1598617640784" />
+    <state width="1330" height="407" key="GridCell.Tab.1.left/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598570190569" />
+    <state width="1330" height="407" key="GridCell.Tab.1.right" timestamp="1598617640785">
+      <screen x="-1680" y="299" width="1680" height="1027" />
+    </state>
+    <state width="1330" height="407" key="GridCell.Tab.1.right/0.23.2560.1417/-1680.299.1680.1027@-1680.299.1680.1027" timestamp="1598617640785" />
+    <state width="1330" height="407" key="GridCell.Tab.1.right/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598570190580" />
+    <state x="171" y="319" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598575063273">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="171" y="319" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598575063273" />
+    <state x="1488" y="280" width="924" height="803" key="dock-window-1" timestamp="1598563862277">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1488" y="280" width="924" height="803" key="dock-window-1/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598563862277" />
+    <state x="327" y="474" width="598" height="490" key="find.popup" timestamp="1598575304300">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="327" y="474" width="598" height="490" key="find.popup/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598575304300" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1598576550174">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.2560.1417/-1680.299.1680.1027@0.23.2560.1417" timestamp="1598576550174" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/ederign/SwitchSamples.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/ederign/SwitchSamples.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
